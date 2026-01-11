@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyLine Airport Agency</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-plane-departure"></i>
+                <h1>SkyLine<span>Airport</span></h1>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#flights">Flights</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Your Journey Begins With Us</h2>
+                <p>Experience seamless travel with our premium airport services. Fast check-ins, comfortable lounges, and world-class assistance.</p>
+                <div class="cta-buttons">
+                    <a href="#flights" class="btn btn-primary">Book a Flight</a>
+                    <a href="#services" class="btn btn-secondary">Our Services</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Airplane at airport">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-suitcase-rolling"></i>
+                    <h3>Baggage Handling</h3>
+                    <p>Secure and efficient baggage handling with real-time tracking for your peace of mind.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-concierge-bell"></i>
+                    <h3>VIP Lounge</h3>
+                    <p>Relax in our premium lounges with complimentary refreshments and high-speed Wi-Fi.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Security Check</h3>
+                    <p>Fast-track security screening with our priority lanes and advanced security systems.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-car"></i>
+                    <h3>Parking Services</h3>
+                    <p>Secure short-term and long-term parking options with valet services available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flight Search Section -->
+    <section class="flight-search" id="flights">
+        <div class="container">
+            <h2 class="section-title">Find Your Flight</h2>
+            <div class="search-container">
+                <div class="search-tabs">
+                    <button class="tab-btn active" data-tab="one-way">One Way</button>
+                    <button class="tab-btn" data-tab="round-trip">Round Trip</button>
+                    <button class="tab-btn" data-tab="multi-city">Multi-City</button>
+                </div>
+                <form id="flight-search-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="from"><i class="fas fa-plane-departure"></i> From</label>
+                            <select id="from" required>
+                                <option value="">Select Airport</option>
+                                <option value="JFK">JFK - New York</option>
+                                <option value="LAX">LAX - Los Angeles</option>
+                                <option value="LHR">LHR - London</option>
+                                <option value="CDG">CDG - Paris</option>
+                                <option value="HND">HND - Tokyo</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="to"><i class="fas fa-plane-arrival"></i> To</label>
+                            <select id="to" required>
+                                <option value="">Select Airport</option>
+                                <option value="JFK">JFK - New York</option>
+                                <option value="LAX">LAX - Los Angeles</option>
+                                <option value="LHR">LHR - London</option>
+                                <option value="CDG">CDG - Paris</option>
+                                <option value="HND">HND - Tokyo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="departure"><i class="far fa-calendar-alt"></i> Departure</label>
+                            <input type="date" id="departure" required>
+                        </div>
+                        <div class="form-group" id="return-group">
+                            <label for="return"><i class="far fa-calendar-alt"></i> Return</label>
+                            <input type="date" id="return">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="passengers"><i class="fas fa-user-friends"></i> Passengers</label>
+                            <select id="passengers">
+                                <option value="1">1 Passenger</option>
+                                <option value="2">2 Passengers</option>
+                                <option value="3">3 Passengers</option>
+                                <option value="4">4 Passengers</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="class"><i class="fas fa-chair"></i> Class</label>
+                            <select id="class">
+                                <option value="economy">Economy</option>
+                                <option value="business">Business</option>
+                                <option value="first">First Class</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-search">
+                        <i class="fas fa-search"></i> Search Flights
+                    </button>
+                </form>
+                <div class="flight-results" id="flight-results">
+                    <h3>Available Flights</h3>
+                    <div id="results-container">
+                        <p class="no-results">Search for flights to see available options</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <i class="fas fa-plane-departure"></i>
+                        <h3>SkyLine<span>Airport</span></h3>
+                    </div>
+                    <p>Providing exceptional airport services and travel experiences since 2005.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Airport Boulevard, SkyCity</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@skylineairport.com</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#flights">Flight Booking</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for updates and travel offers</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 SkyLine Airport Agency. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
